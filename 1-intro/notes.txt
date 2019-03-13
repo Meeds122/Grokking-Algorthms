@@ -1,0 +1,34 @@
+
+Binary Search
+
+Simple search algorithm = O(n)
+Binary searc algorithm = O(log2(n))
+So a 100000000 item array will take
+Simple search = 100000000 iterations
+Binary search algorithm = 27 iterations max
+This is great but only works on sorted data. 
+You can maintain data sort by using a binary search
+to determine where to insert new data. You incur an 
+insertion penalty. Sometimes it's cheaper to 
+append the new value and then use an efficient sorting algorithm
+
+Example algorithm
+def binarySearch(number_to_find, array):
+    """
+    binarySearch(number_to_find, array)
+    given a number to find and a SORTED array of numbers, it will return the location of the number in the array or None if number not in array
+    O(logN)
+    """
+    low = 0
+    high = len(array) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        guess = array[mid]
+        if guess == number_to_find:
+            return mid
+        elif guess > number_to_find:
+            high = mid - 1
+        else:
+            low = mid + 1
+    return None
+
