@@ -3,9 +3,11 @@
 def bsearch(dbfile, value_to_find):
     """
     bsearch(dbfile, value_to_find)
+    Does a binary search of the dbfile for value_to_find
     returns a tuple consiting of (1, 2)
         1. Entry at value_to_find's index
         2. Number of operations required
+    If the value is not found, return None in position 0
     """
     
     TESTING = False
@@ -37,3 +39,34 @@ def bsearch(dbfile, value_to_find):
         else:
             low = mid + 1
     return (entry, operations)
+
+def lsearch(dbfile, value_to_find):
+    """
+    lsearch(dbfile, value_to_find)
+    Does a linear search of dbfile for value_to_find
+    returns a tuple of (1, 2) where
+        1. Entry at value_to_find's index
+        2. Number of operations required
+    If the value is not found, return Null in the 0th positon 
+    """
+
+    TESTING = False
+
+    entry = None
+    operations = 0
+
+    dbfile_handle = open(dbfile, 'r')
+    db_contents = list()
+    for line in dbfile_handle.readlines():
+        db_contents.append(line.strip())
+    
+    for i in range(len(db_contents)):
+        operations += 1
+        line = db_contents[i]
+        if line[:line.find(',')] == value_to_find:
+            entry = line
+            return (entry, operations)
+    
+    # No value found after searching entire space
+    return (entry, operations)
+

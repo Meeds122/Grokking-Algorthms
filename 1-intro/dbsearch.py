@@ -83,7 +83,14 @@ def main():
         else:
             # Value found
             print(ret[0], "found in", ret[1], "operations!")
-    
+    elif iterate != None:
+        print("Doing a linear search of the database. This might take some time...")
+        ret = dbalg.lsearch(database, iterate)
+        if ret[0] == None:
+            # Value not found
+            print("Value not found. Took", ret[1], "operations")
+        else:
+            print(ret[0], "found in", ret[1], "operations!")
         
     
 
