@@ -35,7 +35,7 @@ import dbalg
 def main():
 
     #enables in-code tests
-    TESTING_MODE = True
+    TESTING_MODE = False
 
     # remind me of the testing mode status
     if TESTING_MODE == True:
@@ -74,7 +74,17 @@ def main():
     if generate != None:
         print("This might take some time depending on requested size. ")
         dbgen.makeDB(database, generate)
+    elif binary != None:
+        print("Doing a binary search for the requested value...")
+        ret = dbalg.bsearch(database, binary)
+        if ret[0] == None:
+            # Value not found
+            print("Value not found. Took", ret[1], "operations")
+        else:
+            # Value found
+            print(ret[0], "found in", ret[1], "operations!")
     
+        
     
 
 if __name__ == "__main__":
