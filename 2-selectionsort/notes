@@ -1,0 +1,38 @@
+=====
+DATA STRUCTURES
+=====
+Arrays are memory addresses right next to each other like
+Lists [linked lists] are independent memory addresses that contain the main data and a pointer to the next item in the data chain
+
+Arrays are best for when you're doing lots of reading because you can access elements without having to wade through the entire chain.
+Lists are best for when you're doing lots of writing because the memory addresses do not need to be next to eachother and they're easier to expand. 
+
+Lists:
+    reading [O(n)]
+    insertion [O(1)]
+    deletion [O(1)]
+
+Arrays:
+    reading [O(1)]
+    insertion [O(n)]
+    deletion [O(n)]
+
+=====
+SELECTION SORT
+=====
+
+10 >-
+6   |
+7   |
+4   |
+2   |
+3   |
+1   |
+5   |
+9   |
+8   |
+ <--
+
+Scan the elements of the array and insert the largest element at the end. continue until elements are sorted
+
+Code example:
