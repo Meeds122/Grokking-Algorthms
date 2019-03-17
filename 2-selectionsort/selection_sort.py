@@ -13,7 +13,7 @@ def selectionSort(array):
     return_array = list()
 
     while N > 0:
-        # Reset lowest againn
+        # Reset lowest again
         lowest = working_array[0]
         lowest_loc = 0
         # Search array for smallest item
