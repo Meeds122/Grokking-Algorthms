@@ -12,3 +12,7 @@ def iterativeFactorial(x):
         total = total * x
         x = x - 1
     return total
+
+if __name__ == "__main__":
+    print("Recursive factorial of 5:", recursiveFactorial(5))
+    print("Iterative factorial of 5:", iterativeFactorial(5))
