@@ -1,0 +1,27 @@
+Divide and conquer
+
+Think about how you can split up the problem until it's solvable.
+
+Euclid's algorithm. How to find the greates common denominator
+The way the book describes it is to think about a rectangular plot of land. How would you figure the largest square portion you can split it into?
+
+1. let the smaller side = x. Split it into squares of x by x. 
+2. If there is no land left, you're largest squuares are x by x. If there is land left, jump to step 1
+
+code
+
+def euclidAlgo(height, width):
+    if height == width:
+        // Already a square aka base case
+        return height
+    else if height > width:
+        if height % width == 0:
+            // Width divides evenly into height, return width as it will square. 
+            return width
+        // will have to determine whats left and recurse
+
+    else:
+        if width % height == 0:
+            // Height devides evenly into width, return height as it will square
+            return height
+            
