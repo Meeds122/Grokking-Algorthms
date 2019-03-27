@@ -24,4 +24,22 @@ def euclidAlgo(height, width):
         if width % height == 0:
             // Height devides evenly into width, return height as it will square
             return height
-            
+
+
+Quicksort
+
+Quicksort is a devide and conquer algorithm for sorting arrays. It perform in O(n) time in optimal situations, O(nlogn) time on average, and O(2^n) time
+in a worst case scenario. 
+
+base cases:
+[] -- empty array; return;
+[12] -- single element array; return
+[2,1] -- 2 elements; sort appropriately then return;
+
+recursive cases:
+in any array with a total of elements greater than 2:
+    1. Pick pivot
+    2. Place all larger than pivot in new array
+    3. call function on new set of arrays
+    4. return smallarray + pivot + largerarray
+
