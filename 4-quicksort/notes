@@ -8,23 +8,6 @@ The way the book describes it is to think about a rectangular plot of land. How 
 1. let the smaller side = x. Split it into squares of x by x. 
 2. If there is no land left, you're largest squuares are x by x. If there is land left, jump to step 1
 
-code
-
-def euclidAlgo(height, width):
-    if height == width:
-        // Already a square aka base case
-        return height
-    else if height > width:
-        if height % width == 0:
-            // Width divides evenly into height, return width as it will square. 
-            return width
-        // will have to determine whats left and recurse
-
-    else:
-        if width % height == 0:
-            // Height devides evenly into width, return height as it will square
-            return height
-
 
 Quicksort
 
@@ -38,8 +21,9 @@ base cases:
 
 recursive cases:
 in any array with a total of elements greater than 2:
-    1. Pick pivot
+    1. Pick pivot (random is best)
     2. Place all larger than pivot in new array
-    3. call function on new set of arrays
-    4. return smallarray + pivot + largerarray
+    3. Place all smaller than pivot in new array
+    4. call function on new set of arrays
+    5. return smallarray + pivot + largerarray
 
