@@ -1,0 +1,10 @@
+Hash tables
+
+When you want to do very fast lookups. 
+
+Simple search = O(n)
+Binary Search = O(log(n))
+Hash Table    = O(1)
+
+Hash Tables do lookups in constant time. It doesn't matter where the item is, a hash table will find it always in the same time. 
+
